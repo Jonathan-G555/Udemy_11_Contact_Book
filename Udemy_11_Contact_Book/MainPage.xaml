@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Udemy_11_Contact_Book.MainPage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem  Clicked="ToolbarItem_Clicked" Icon ="plus.png" ></ToolbarItem>
+        
+    </ContentPage.ToolbarItems>
+
+    <ListView HasUnevenRows="True" x:Name ="List_contacts" ItemSelected="List_contacts_ItemSelected">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <TextCell Text="{Binding Name}">
+                    <TextCell.ContextActions>
+                        <MenuItem Text="Delete" 
+                                  Clicked="Delete_Item_Clicked" 
+                                  IsDestructive="True"
+                                  Command="{Binding .}"
+                                  ></MenuItem>
+                    </TextCell.ContextActions>
+                </TextCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+</ContentPage>

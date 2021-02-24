@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Udemy_11_Contact_Book.Contact_Entry">
+    <ContentPage.Content>
+        <StackLayout>
+            <TableView Intent="Form">
+                <TableRoot>
+                    <TableSection>
+                        <EntryCell Label="First name" Keyboard="Text" Text="{Binding First_Name}" x:Name="Fist_Entry"></EntryCell>
+                        <EntryCell Label="Second name" Keyboard="Default" Text="{Binding Second_Name}"></EntryCell>
+                        <EntryCell Label="Phone" Keyboard="Numeric" Text="{Binding Phone}"></EntryCell>
+                        <EntryCell Label="Email" Keyboard="Email" Text="{Binding Email}"></EntryCell>
+                        <SwitchCell Text="Blocked" On="{Binding Blocked}" ></SwitchCell>
+                    </TableSection>
+                </TableRoot>
+            </TableView>
+
+            <Button Text="Done"
+                    HorizontalOptions="End"
+            ></Button>
+                
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

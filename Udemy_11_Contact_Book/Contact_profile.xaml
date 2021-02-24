@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Udemy_11_Contact_Book.Contact_profile">
+    <ContentPage.Content>
+        <TableView Intent="Form">
+            <TableRoot>
+                <TableSection Title="Name">
+                    <TextCell Text="First name" Detail="{Binding First_Name}" ></TextCell>
+                    <TextCell Text="Second name" Detail="{Binding Second_Name}" ></TextCell>
+                </TableSection>
+                <TableSection Title="Contact">
+                    <TextCell Text="Phone" Detail="{Binding Phone}" ></TextCell>
+                    <TextCell Text="Email" Detail="{Binding Email}" ></TextCell>
+                </TableSection>
+                <TableSection Title="Other">
+                    <SwitchCell Text="Blocked" On="False"></SwitchCell>
+                </TableSection>
+            </TableRoot>
+        </TableView>
+    </ContentPage.Content>
+</ContentPage>
